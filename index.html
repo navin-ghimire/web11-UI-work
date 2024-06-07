@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+   .main {
+    padding: 15px 40px;
+   }
+
+   .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+
+   .side-left {
+    display: flex;
+    align-items: center;
+   }
+
+   .logo {
+    display: flex;
+    gap: 10px;
+    padding-right: 20px;
+   }
+    
+   .side-left nav {
+    margin-top: 3px;
+    display: flex;
+    gap: 15px;
+   }
+
+   .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+   a{
+    text-decoration: none;
+    color: rgb(66, 60, 60);
+   }
+
+    a:hover {
+      text-decoration: underline 1px black;
+      text-underline-offset: 7px;
+    }  
+
+   .side-right nav {
+    display: flex;
+    gap: 17px;
+    cursor: pointer;
+   }
+  
+   .dis-section {
+    margin: 15px 0;
+    background-image: url(/assets/img/showcase.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    }
+
+    .dis-info {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .dis-info p {
+      padding: 20px 0;
+    }
+
+    .common {
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 7px 10px;
+      cursor: pointer;
+      border-radius: 10px 10px 10px 10px;
+    }
+    
+     .products {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+       gap: 14px;
+     }
+     
+     .card img {
+       width: 100%;
+       margin-bottom: 24px;
+     }
+
+     .card-info p {
+      margin: 11px 0;
+     }
+      
+
+     .card-info button {
+       border: none;
+       background-color: transparent;
+       color: blueviolet;
+       cursor: pointer;
+       font-weight: bold;
+     }
+
+     .learn:hover {
+      margin-right: 5px;
+     }
+       
+      .x-box {
+        margin: 25px 0 20px 0;
+        height: 300px;
+        background-image: url(assets/img/xbox.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 0 0 25px;
+      }
+
+       .x-box-info {
+        width: 40%;
+       } 
+
+        .x-box-info p {
+          margin: 20px 0;
+          font-size: 17px;
+          letter-spacing: 0.7px;
+        }
+
+        @media(max-width: 712px) {
+          .x-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .x-box-info {
+            width: 100%;
+            padding: 0;
+          }
+        }
+         
+        .bigbox {
+          margin: 25px 0 20px 0;
+          height: 400px;
+          background-image: url(https://images.unsplash.com/photo-1717319617633-99821a8d8e04?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5OXx8fGVufDB8fHx8fA%3D%3D);
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: 170px 0 0 35px;
+          letter-spacing: 0.2px;
+          color: white;
+
+        }
+
+        .bigbox-info {
+          width: 50%;
+          
+        }
+
+        .bigbox-info p {
+          margin: 20px 0;
+          font-size: 17px;
+          letter-spacing: 0.7px;
+        }
+
+        .last:hover {
+          cursor: pointer;
+        }
+
+
+        .last-section {
+          width: 20%;
+         position: relative;
+        }
+        
+        
+        .media {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          
+        }
+
+        .media img {
+          cursor: pointer;
+        }
+        
+         .footer {
+          height: 400px;
+          margin: 25px 0 20px 0;
+          background-color: pink;
+         }
+
+        .sectionlink {
+          height: 280px;
+           padding: 40px 0 20px 15px;
+           display: flex;
+           justify-content: space-between;
+        }
+
+        .sectionlink h2 {
+          margin: 15px 0;
+        }
+
+        .sectionlink-info p {
+          margin: 15px 0;
+          cursor: pointer;
+        }
+
+
+        .globe-detail {
+          padding: 40px 0 20px 15px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+       .globe-detail h5 {
+        color: rgb(109, 79, 84);
+        font-weight: 15px;
+       }
+
+       .globe-detail p {
+        
+        cursor: pointer;
+       }
+
+    </style>
+
+</head>
+
+
+<body>
+  
+  <div class="main">
+
+  <div class="head">
+
+    <div class="side-left">
+      <div class="logo">
+        <img src="/assets/img/favicon.ico" alt="">
+        <h1>Microsoft</h1>
+      </div>
+      <nav>
+        <a href="">Office</a>
+        <a href="">Windows</a>
+        <a href="">Surface</a>
+        <a href="">Xbox</a>
+        <a href="">Deals</a>
+        <a href="">Supports</a>
+      </nav>
+    </div>
+
+    <div class="side-right">
+      <nav class="carts">
+        <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </nav>
+    </div>
+
+
+  </div>
+
+     <div class="dis-section">
+      <div class="dis-info">
+        <h2>Surface Deals</h2>
+        <p>Select Surfaces are on sale now - save while supplies last </p>
+        <button>Shop Now <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+     </div>
+
+
+
+
+
+      <div class="products">
+
+        <div class="product card">
+       <img src="/assets/img/card1.png" alt="">
+
+       <div class="card-info">
+        <h3>New Surface Pro 7</h3>
+        <p>See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7 to put her plans into play. </p>
+
+        <button><span class="learn">Learn More</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+        <div class="product card">
+       <img src="/assets/img/card2.png" alt="">
+
+       <div class="card-info">
+        <h3>New Surface Laptop 3</h3>
+        <p>Express yourself powerfully with a thin, light, and elegant design, faster performance, and up to 11.5 hours battery life. </p>
+       
+        <button> <span class="learn">Learn More</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+        <div class="product card">
+       <img src="/assets/img/card3.png" alt="">
+
+       <div class="card-info">
+        <h3>Save $150 + free controller</h3>
+        <p>Buy an Xbox One X console and double your fun with a free select extra controller. Starting at $349.  </p>
+
+        <button> <span class="learn">Learn More</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+        <div class="product card">
+       <img src="/assets/img/card4.png" alt="">
+
+       <div class="card-info">
+        <h3>The new Microsoft Edge</h3>
+        <p>Expect more. World class performance, with more privacy, more productivity, and more value. </p>
+         
+
+        <button> <span class="learn">Learn More</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+
+
+      </div>
+
+
+      <div class="x-box">
+
+        <div class="x-box-info">
+          <h2>Xbox Game Pass Ultimate</h2>
+          <p>Xbox Game Pass Ultimate Xbox Live Gold and over 100 high-quality console and PC games. Play together with friends and discover your next favorite game.</p>
+          <button class="common">Join Now <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        
+      </div>
+
+
+
+
+        
+
+      <div class="products">
+
+        <div class="product card">
+       <img src="/assets/img/card5.png" alt="">
+
+       <div class="card-info">
+        <h3>Microsoft Teams</h3>
+        <p>Unleash the power of your team.  </p>
+
+        <button><span class="learn">Shop Now</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+        <div class="product card">
+       <img src="/assets/img/card6.jpg" alt="">
+
+       <div class="card-info">
+        <h3>Unlock the power of learning</h3>
+        <p>Get students future-ready with Windows 10 devices. Starting at $219.  </p>
+       
+        <button> <span class="learn">Learn More</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+        <div class="product card">
+       <img src="/assets/img/card7.png" alt="">
+
+       <div class="card-info">
+        <h3>Windows 10 Enterprise</h3>
+        <p>Download the free 90-day evaluation for IT professionals.   </p>
+
+        <button> <span class="learn">Download Now</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+        <div class="product card">
+       <img src="/assets/img/card8.png" alt="">
+
+       <div class="card-info">
+        <h3>Explore Kubernetes</h3>
+        <p>Learn how Kubernetes works and get started with cloud native app development today.  </p>
+         
+
+        <button> <span class="learn">Get Started</span> <i class="fa-solid fa-chevron-right"></i></button>
+       </div>
+      </div>
+
+
+      </div>
+
+
+
+    
+      <div class="bigbox">
+
+        <div class="bigbox-info">
+           
+          <h2>Commiting To Carbon Negative</h2>
+          <p>Microsoft will be carbon negative by 2030 and by 2050 we will remove all carbon the company has emitted since it was founded in 1975</p>
+          <button class="last">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="last-section">
+
+           <div class="media">
+
+             <h5>Follow Microsoft</h5>
+            
+              <img src="/assets/img/social-fb.png" alt="">
+              <img src="/assets/img/social-twitter.png" alt="">
+              <img src="/assets/img/social-linkedin.png" alt="">
+             </div>
+             
+            </div>
+
+           
+              <div class="footer">
+
+              
+
+           <div class="sectionlink">
+                  
+            <div class="sectionlink-info">
+              <h2>What's New</h2>
+              <p>Surface Pro X</p>
+              <p>Surface Laptop 3</p>
+              <p>Surface Pro 7</p>
+              <p>Window 10 apps</p>
+              <p>Office apps</p>
+            </div>
+            <div class="sectionlink-info">
+              <h2>Microsoft Store</h2>
+              <p>Account Profile</p>
+              <p>Download Center</p>
+              <p>Microsoft Store Supprt</p>
+              <p>Returns</p>
+              <p>Older Tracking</p>
+            </div>
+            <div class="sectionlink-info">
+              <h2>Education</h2>
+              <p>Microsoft in Education</p>
+              <p>Office for students</p>
+              <p>Office 365 for schools</p>
+              <p>Deals for students</p>
+              <p>Microsoft Azure</p>
+            </div>
+            <div class="sectionlink-info">
+              <h2>Enterprise</h2>
+              <p>Azure</p>
+              <p>Appsource</p>
+              <p>Automotive</p>
+              <p>Government</p>
+              <p>Healthcare</p>
+            </div>
+            <div class="sectionlink-info">
+              <h2>Developer</h2>
+              <p>Visual Studio</p>
+              <p>Windowszs Dev center</p>
+              <p>Developer Network</p>
+              <p>TechNet</p>
+              <p>Microsoft Developer</p>
+            </div>
+            <div class="sectionlink-info">
+              <h2>Company</h2>
+              <p>Careers</p>
+              <p>About Microsoft</p>
+              <p>Company news</p>
+              <p>Privacy at Microsoft</p>
+              <p>Inverstors</p>
+            </div>
+
+           </div>
+
+
+           <div class="globe">
+              
+            
+            
+            <div class="globe-detail">
+                 
+                  <h5> <i class="fa-solid fa-globe"></i> English (United States)</h5>
+                  <p>Sitemap</p>
+                  <p>Contact Microsoft</p>
+                  <p>Privacy & cookies</p>
+                  <p>Term of use</p>
+                  <p>Trademarks</p>
+                  <p>Safety & eco</p>
+                  <p>About our ads</p>
+                  <p>Microsoft 2024</p>
+                     
+                
+
+              
+            </div>
+           </div>
+
+
+
+          </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
